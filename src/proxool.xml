@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!--
+        the proxool configuration can be embedded within your own
+        application's. Anything outside the "proxool" tag is ignored.
+    -->
+<proxool-config>
+    <proxool>
+        <alias>teach</alias> <!--数据源的别名-->
+        <driver-url>jdbc:mysql://127.0.0.1:3306/teach</driver-url><!--url连接串-->
+        <driver-class>com.mysql.jdbc.Driver</driver-class> <!--驱动类-->
+        <driver-properties>
+            <property name="user" value="root" /> <!--用户名-->
+            <property name="password" value="123456" /><!--密码-->
+        </driver-properties>
+        <!--最大连接数(默认5个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定 -->
+        <maximum-connection-count>100</maximum-connection-count>
+        <!--最小连接数(默认2个)-->
+        <minimum-connection-count>30</minimum-connection-count>
+        <!--最少保持的空闲连接数(默认2个)-->
+        <prototype-count>30</prototype-count>
+    </proxool>
+</proxool-config>
+
+
+
